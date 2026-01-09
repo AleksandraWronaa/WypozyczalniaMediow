@@ -6,11 +6,11 @@
 
 class Medium {
 protected:
-    std::string id;             // UUID w UML
+    std::string id;
     std::string tytul;
     int rokWydania;
     int ograniczenieWiekowe;
-    double cenaWypozyczenia;    // Decimal w UML
+    double cenaWypozyczenia;
 
 public:
     Medium(std::string id, std::string tytul, int rok, int wiek, double cena);
@@ -18,11 +18,11 @@ public:
 
     virtual std::string getInfo() const;
 
-    // Metody dostêpowe (gettery) potrzebne do logiki, mimo ¿e UML pokazuje tylko publiczne API
+    //gettery
     std::string getTytul() const;
     std::string getId() const;
 
-    // Metoda pomocnicza do rozpoznawania typu (zastêpuje pure virtual czyCyfrowe dla zgodnoœci z logik¹ UML)
+    // Metoda pomocnicza do rozpoznawania typu
     virtual bool isVirtual() const = 0;
 };
 

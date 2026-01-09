@@ -4,9 +4,8 @@
 #include "MediumTypy.h"
 #include <string>
 
-// ==========================================
-// ENUMY (Zgodnie z UML)
-// ==========================================
+
+// ENUMY
 enum class TypOprawy { TWARDA, MIEKKA };
 enum class NosnikWideo { DVD, BLURAY, KASETA_VHS };
 enum class NosnikAudio { CD, KASETA, WINYL };
@@ -18,10 +17,8 @@ std::string wideoToString(NosnikWideo n);
 std::string audioToString(NosnikAudio n);
 std::string platformaToString(PlatformaGry p);
 
-// ==========================================
-// KLASY FIZYCZNE (Liœcie)
-// ==========================================
 
+// MEDIA FIZYCZNE (Liœcie)
 class KsiazkaFizyczna : public MediumFizyczne {
     std::string autor;
     int liczbaStron;
@@ -64,10 +61,7 @@ public:
     std::string getInfo() const override;
 };
 
-// ==========================================
-// KLASY WIRTUALNE (Liœcie)
-// ==========================================
-
+// MEDIA WIRTUALNE (Liœcie)
 class KsiazkaWirtualna : public MediumWirtualne {
     std::string autor;
     int liczbaStron;

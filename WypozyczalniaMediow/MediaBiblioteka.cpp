@@ -4,9 +4,8 @@
 
 using namespace std;
 
-// ==========================================
+
 // IMPLEMENTACJA FUNKCJI POMOCNICZYCH
-// ==========================================
 
 string oprawaToString(TypOprawy o) { return (o == TypOprawy::TWARDA) ? "Twarda" : "Miekka"; }
 
@@ -29,9 +28,9 @@ string platformaToString(PlatformaGry p) {
     return "Switch";
 }
 
-// ==========================================
+
 // IMPLEMENTACJA KLAS KONKRETNYCH
-// ==========================================
+
 
 // --- Ksiazki Fizyczne ---
 KsiazkaFizyczna::KsiazkaFizyczna(string id, string tytul, int rok, int wiek, double cena,
@@ -85,9 +84,8 @@ string GraFizyczna::getInfo() const {
         ", Platforma: " + platformaToString(platforma);
 }
 
-// ==========================================
+
 // IMPLEMENTACJA KLAS WIRTUALNYCH
-// ==========================================
 
 // --- Ksiazki Wirtualne ---
 KsiazkaWirtualna::KsiazkaWirtualna(string id, string tytul, int rok, int wiek, double cena,

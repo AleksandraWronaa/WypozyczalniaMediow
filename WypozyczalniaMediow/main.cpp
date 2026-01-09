@@ -1,14 +1,12 @@
 #include <iostream>
 #include <memory>
-// Zmiana: Do³¹czamy nag³ówek z konkretnymi klasami (Ksiazka, Gra itd.)
 #include "MediaBiblioteka.h" 
 #include "Klient.h"
 
 using namespace std;
 
 int main() {
-    // 1. Tworzenie mediów - U¿ywamy teraz konkretnych klas "Liœci" z UML
-
+     
     // Ksiazka Fizyczna: ID, Tytul, Rok, Wiek, Cena, Stan, Lok, Autor, Strony, Oprawa
     auto wiedzmin = make_shared<KsiazkaFizyczna>(
         "UUID-BOOK-001", "Wiedzmin: Krew Elfow", 1994, 18, 15.99,
@@ -30,21 +28,21 @@ int main() {
         "C. Nolan", 148, NosnikWideo::BLURAY
     );
 
-    // 2. Tworzenie klienta
+    // Klienta
     Klient jan("UUID-KLIENT-100", "Jan", "Kowalski", "123-456-789", "Kwiatowa 5, Warszawa");
 
-    // 3. Wypo¿yczenia
+    // Wypo¿yczenia
     jan.wypozycz(wiedzmin);
     jan.wypozycz(minecraft);
     jan.wypozycz(film);
 
-    // 4. Sprawdzenie stanu (Wszystkie aktywne)
+    // Sprawdzenie stanu (Wszystkie aktywne)
     jan.pokazStanKonta();
 
-    // 5. Test metody specyficznej dla wirtualnych
+    // Test metody specyficznej dla wirtualnych
     cout << ">> Link do gry: " << minecraft->generujLink() << endl;
 
-    // 6. Zwrot fizyczny
+    // Zwrot fizyczny
     // Symulacja: szukamy w historii czegoœ co nie jest wirtualne i zwracamy
     auto historia = jan.getHistoriaWypozyczen();
     for (auto& w : historia) {
@@ -54,7 +52,7 @@ int main() {
         }
     }
 
-    // 7. Sprawdzenie po zwrocie (Fizyczne powinny zniknac ze statusu Aktywne, Wirtualne zostaj¹)
+    // Sprawdzenie po zwrocie (Fizyczne powinny zniknac ze statusu Aktywne, Wirtualne zostaj¹)
     jan.pokazStanKonta();
 
     return 0;

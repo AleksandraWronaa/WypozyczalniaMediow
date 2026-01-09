@@ -14,13 +14,13 @@ class Klient {
     std::string numerTelefonu;
     std::string adresZamieszkania;
 
-    // Relacja "posiada"
+
     std::vector<std::shared_ptr<Wypozyczenie>> historiaWypozyczen;
 
 public:
     Klient(std::string id, std::string im, std::string naz, std::string tel, std::string adr);
 
-    // Zwraca listê (w UML: getHistoriaWypozyczen(): List<Wypozyczenie>)
+    // Zwraca listê
     std::vector<std::shared_ptr<Wypozyczenie>> getHistoriaWypozyczen();
 
     void wypozycz(std::shared_ptr<Medium> medium);

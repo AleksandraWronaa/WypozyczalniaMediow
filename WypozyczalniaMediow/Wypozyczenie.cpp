@@ -9,7 +9,7 @@ Wypozyczenie::Wypozyczenie(string id, shared_ptr<Medium> m)
     dataWypozyczenia = time(nullptr);
     czyZwroconoFizycznie = false;
 
-    // Logika z notatki UML: Domyœlnie oplaconeDo = data + 10 dni (dla wirtualnych istotne)
+    //Domyœlnie oplaconeDo = data + 10 dni (dla wirtualnych istotne)
     // 10 dni * 24h * 3600s
     oplaconeDo = dataWypozyczenia + (10 * 24 * 3600);
 }
@@ -24,14 +24,13 @@ void Wypozyczenie::zarejestrujZwrot() {
     }
 }
 
-// Zgodnie z ¿ó³t¹ notatk¹ na diagramie UML
 bool Wypozyczenie::czyLicencjaAktywna() const {
     if (medium->isVirtual()) {
-        // 1. Jeœli Wirtualne: sprawdza czy data dzisiejsza < oplaconeDo
+        //Jeœli Wirtualne: sprawdza czy data dzisiejsza < oplaconeDo
         return time(nullptr) < oplaconeDo;
     }
     else {
-        // 2. Jeœli Fizyczne: sprawdza czyZwroconoFizycznie == false
+        //Jeœli Fizyczne: sprawdza czyZwroconoFizycznie == false
         return !czyZwroconoFizycznie;
     }
 }

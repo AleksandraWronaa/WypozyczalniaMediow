@@ -3,7 +3,7 @@
 
 #include "Medium.h"
 
-// --- Medium Fizyczne ---
+// Medium Fizyczne
 class MediumFizyczne : public Medium {
 protected:
     int stanMagazynowy;
@@ -19,7 +19,8 @@ public:
     bool isVirtual() const override { return false; }
 };
 
-// --- Medium Wirtualne (dawniej Cyfrowe) ---
+
+// Medium Wirtualne
 class MediumWirtualne : public Medium {
 protected:
     double rozmiarPlikuMB;

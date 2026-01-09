@@ -12,7 +12,6 @@ class Wypozyczenie {
     time_t oplaconeDo;          // DateTime
     bool czyZwroconoFizycznie;
 
-    // Relacja 1:1 "dotyczy"
     std::shared_ptr<Medium> medium;
 
 public:

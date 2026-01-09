@@ -12,7 +12,7 @@ vector<shared_ptr<Wypozyczenie>> Klient::getHistoriaWypozyczen() {
 }
 
 void Klient::wypozycz(shared_ptr<Medium> medium) {
-    // Generujemy ID wypozyczenia (symulacja UUID)
+    // Generowanie ID wypozyczenia (UUID)
     string idWyp = "WYP-" + medium->getId() + "-" + to_string(time(nullptr));
 
     auto noweWypozyczenie = make_shared<Wypozyczenie>(idWyp, medium);

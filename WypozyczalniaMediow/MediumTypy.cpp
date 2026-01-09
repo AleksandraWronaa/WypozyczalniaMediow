@@ -2,10 +2,10 @@
 
 using namespace std;
 
-// --- Implementacja MediumFizyczne ---
+// MediumFizyczne
 MediumFizyczne::MediumFizyczne(string id, string tytul, int rok, int wiek, double cena, int stan, string lokalizacja)
     : Medium(id, tytul, rok, wiek, cena), stanMagazynowy(stan), lokalizacjaWSalonie(lokalizacja) {
-    // Logika biznesowa: jeœli stan > 0 to dostêpne
+    //jeœli stan > 0 to dostêpne
     dostepnosc = (stanMagazynowy > 0);
 }
 
@@ -19,13 +19,13 @@ string MediumFizyczne::getInfo() const {
         " | Stan: " + to_string(stanMagazynowy);
 }
 
-// --- Implementacja MediumWirtualne ---
+// MediumWirtualne
 MediumWirtualne::MediumWirtualne(string id, string tytul, int rok, int wiek, double cena, double rozmiar, string url, string format)
     : Medium(id, tytul, rok, wiek, cena), rozmiarPlikuMB(rozmiar), urlPobrania(url), formatPliku(format) {
 }
 
 string MediumWirtualne::generujLink() const {
-    return urlPobrania + "?token=SECURE123"; // Symulacja generowania linku
+    return urlPobrania + "?token=SECURE123"; //symulacja generowania linku
 }
 
 string MediumWirtualne::getInfo() const {

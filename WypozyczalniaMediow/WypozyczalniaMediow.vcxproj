@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Klient.h" />
+    <ClInclude Include="MediaBiblioteka.h" />
     <ClInclude Include="Medium.h" />
     <ClInclude Include="MediumTypy.h" />
     <ClInclude Include="Utils.h" />
@@ -132,6 +133,7 @@
   <ItemGroup>
     <ClCompile Include="Klient.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MediaBiblioteka.cpp" />
     <ClCompile Include="Medium.cpp" />
     <ClCompile Include="MediumTypy.cpp" />
     <ClCompile Include="Utils.cpp" />

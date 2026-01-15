@@ -28,7 +28,7 @@ int main() {
         "C. Nolan", 148, NosnikWideo::BLURAY
     );
 
-    // Klienta
+    // Klient
     Klient jan("UUID-KLIENT-100", "Jan", "Kowalski", "123-456-789", "Kwiatowa 5, Warszawa");
 
     // Wypo¿yczenia
@@ -47,7 +47,7 @@ int main() {
     auto historia = jan.getHistoriaWypozyczen();
     for (auto& w : historia) {
         if (!w->getMedium()->isVirtual() && w->czyLicencjaAktywna()) {
-            cout << ">> Próba zwrotu: " << w->getMedium()->getTytul() << endl;
+            cout << ">> Proba zwrotu: " << w->getMedium()->getTytul() << endl;
             w->zarejestrujZwrot();
         }
     }
